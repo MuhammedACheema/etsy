@@ -48,6 +48,9 @@ Listing.fromJSON = function(json) {
 }
 
 Listing.prototype.formatPrice = function() {
+  for(const[key,value] of Object.entries(currency_symbols)){ //This will iterate through the dictionary
+    return (value + Listing.price + " " + key); //will return the proper format style symbol, value, code
+  }
   return this.price.toFixed(2);
 };
 
