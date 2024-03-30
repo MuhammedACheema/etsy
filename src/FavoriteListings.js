@@ -23,7 +23,7 @@ FavoriteListings.prototype.addListing = function(listing) {
 };
 
 FavoriteListings.prototype.removeListing = function(listing) {
-
+  this.listings.splice(listing); //Allows you to remove an element, no matter where the index is.
 };
 
 FavoriteListings.prototype.getFavorites = function() {
